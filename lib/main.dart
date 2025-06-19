@@ -4,68 +4,156 @@ void main() {
   runApp(
     MaterialApp(
       home: Scaffold(
+        backgroundColor: Color(0xFF3E2723), // Dark chocolate background
         appBar: AppBar(
+          backgroundColor: Color(0xFFD17D36), // Whiskey amber for AppBar
+          elevation: 0,
           title: Text(
-            'Coffee Brew Buddy',
+            'DrinkKinds',
             style: TextStyle(
-              fontSize: 30,
-              fontWeight: FontWeight.w700,
-              fontStyle: FontStyle.normal,
-              letterSpacing: 1.5,
-              color: Colors.white,
+              fontSize: 20,
+              fontWeight: FontWeight.w900,
+              letterSpacing: 2,
+              color: Colors.white, // White text on amber background
+              shadows: [
+                Shadow(
+                  color: Colors.black.withOpacity(0.6),
+                  blurRadius: 4,
+                  offset: Offset(2, 2),
+                ),
+              ],
             ),
           ),
-          backgroundColor: Color(0xFF3E2723), // Espresso Brown
+          centerTitle: true,
         ),
-        body: Center(
+        body: Padding(
+          padding: EdgeInsets.all(20),
           child: Column(
-            mainAxisAlignment: MainAxisAlignment.center,
-            crossAxisAlignment: CrossAxisAlignment.center,
+            crossAxisAlignment: CrossAxisAlignment.stretch,
             children: [
-              Text(
-                'POUR OVER',
-                style: TextStyle(
-                  fontSize: 30,
-                  color: Color(0xFF6F4F37), // Coffee Bean Brown
-                  fontWeight: FontWeight.w900,
-                  letterSpacing: 2.5,
-                  shadows: [
-                    Shadow(
-                      color: Colors.black.withOpacity(0.25),
-                      blurRadius: 8,
-                      offset: Offset(3, 3),
+              // Name Section (Updated to Cognac Brown)
+              Container(
+                margin: EdgeInsets.all(10),
+                decoration: BoxDecoration(
+                  color: Color(0xFF4B2F1B), // Cognac Brown for name section
+                  borderRadius: BorderRadius.circular(15),
+                  border: Border.all(color: Color(0xFFD17D36), width: 1.5), // Whiskey amber border
+                  boxShadow: [
+                    BoxShadow(
+                      color: Colors.black.withOpacity(0.3),
+                      blurRadius: 6,
+                      offset: Offset(0, 3),
+                    ),
+                  ],
+                ),
+                padding: EdgeInsets.symmetric(vertical: 5, horizontal: 10),
+                child: Column(
+                  children: [
+                    Text(
+                      'NAME',
+                      style: TextStyle(
+                        color: Colors.white70,
+                        fontSize: 16,
+                        fontWeight: FontWeight.bold,
+                        letterSpacing: 1.2,
+                      ),
+                    ),
+                    SizedBox(height: 5),
+                    Text(
+                      'JOHN CARLO',
+                      style: TextStyle(
+                        color: Colors.white, // White text on cognac brown background
+                        fontSize: 22,
+                        fontWeight: FontWeight.w900,
+                        letterSpacing: 1.5,
+                      ),
                     ),
                   ],
                 ),
               ),
-              Text(
-                'FRENCH PRESS',
-                style: TextStyle(
-                  fontSize: 28,
-                  color: Color(0xFF6F4F37), // Coffee Bean Brown
-                  fontWeight: FontWeight.w900,
-                  letterSpacing: 2.5,
-                  shadows: [
-                    Shadow(
-                      color: Colors.black.withOpacity(0.25),
-                      blurRadius: 8,
-                      offset: Offset(3, 3),
+
+              // Age Section (Updated to Cognac Brown)
+              Container(
+                margin: EdgeInsets.all(10),
+                decoration: BoxDecoration(
+                  color: Color(0xFF4B2F1B), // Cognac Brown for age section
+                  borderRadius: BorderRadius.circular(15),
+                  border: Border.all(color: Color(0xFFD17D36), width: 1.5), // Whiskey amber border
+                  boxShadow: [
+                    BoxShadow(
+                      color: Colors.black.withOpacity(0.3),
+                      blurRadius: 6,
+                      offset: Offset(0, 3),
+                    ),
+                  ],
+                ),
+                padding: EdgeInsets.fromLTRB(32, 16, 32, 16),
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  children: [
+                    Text(
+                      'AGE',
+                      style: TextStyle(
+                        color: Colors.white70,
+                        fontSize: 16,
+                        fontWeight: FontWeight.bold,
+                        letterSpacing: 1.2,
+                      ),
+                    ),
+                    Padding(
+                      padding: EdgeInsets.symmetric(horizontal: 10, vertical: 5),
+                      child: Text(
+                        '22',
+                        style: TextStyle(
+                          color: Colors.white, // White text on cognac brown background
+                          fontSize: 22,
+                          fontWeight: FontWeight.w900,
+                        ),
+                      ),
                     ),
                   ],
                 ),
               ),
-              Text(
-                'ESPRESSO',
-                style: TextStyle(
-                  fontSize: 26,
-                  color: Color(0xFF6F4F37), // Coffee Bean Brown
-                  fontWeight: FontWeight.w900,
-                  letterSpacing: 2.5,
-                  shadows: [
-                    Shadow(
-                      color: Colors.black.withOpacity(0.25),
-                      blurRadius: 8,
-                      offset: Offset(3, 3),
+
+              // Gender Section (Updated to Cognac Brown)
+              Container(
+                margin: EdgeInsets.all(10),
+                decoration: BoxDecoration(
+                  color: Color(0xFF4B2F1B), // Cognac Brown for gender section
+                  borderRadius: BorderRadius.circular(15),
+                  border: Border.all(color: Color(0xFFD17D36), width: 1.5), // Whiskey amber border
+                  boxShadow: [
+                    BoxShadow(
+                      color: Colors.black.withOpacity(0.3),
+                      blurRadius: 6,
+                      offset: Offset(0, 3),
+                    ),
+                  ],
+                ),
+                padding: EdgeInsets.fromLTRB(32, 16, 32, 16),
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  children: [
+                    Text(
+                      'GENDER',
+                      style: TextStyle(
+                        color: Colors.white70,
+                        fontSize: 16,
+                        fontWeight: FontWeight.bold,
+                        letterSpacing: 1.2,
+                      ),
+                    ),
+                    Padding(
+                      padding: EdgeInsets.symmetric(horizontal: 10, vertical: 5),
+                      child: Text(
+                        'MALE',
+                        style: TextStyle(
+                          color: Colors.white, // White text on cognac brown background
+                          fontSize: 22,
+                          fontWeight: FontWeight.w900,
+                          letterSpacing: 1.5,
+                        ),
+                      ),
                     ),
                   ],
                 ),
@@ -73,8 +161,10 @@ void main() {
             ],
           ),
         ),
-        backgroundColor: Color(0xFFD1B29D), // Cappuccino Cream
       ),
     ),
   );
 }
+
+
+
